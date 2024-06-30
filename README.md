@@ -10,7 +10,7 @@
  [![Readme in English][readme-eng-shield]][readme-eng-url] [![View Demo][view-demo-shield]][view-demo-url] [![Report bug][report-bug-shield]][report-bug-url] [![Request feature][request-feature-shield]][request-feature-url]
 
 <!--목차-->
-# Table of Contents
+# 목차
 - [[1] About the Project](#1-about-the-project)
   - [Features](#features)
   - [Technologies](#technologies)
