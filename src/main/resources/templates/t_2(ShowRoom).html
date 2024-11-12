@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="ko"><head>
+<link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/common/27f65f13d65624198b9d0001bceb94548239d4a9.d69323deaf6eae17cc58c2908dd3f0df/1726827827" crossorigin="anonymous" /><link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/tjdus0817/c572c4707041bb39efc8e08ba9fafe139fcbc713.d69323deaf6eae17cc58c2908dd3f0df/1726819406" crossorigin="anonymous" />
+<style>
+			canvas {
+				width: 1680px !important; 
+				height: 270px !important;
+			}
+		#showroom-container {
+			width: 100%;
+			margin:0 auto;
+		}
+		.main_image_text_gallery {
+			margin:0;
+			padding:0;
+		}
+	</style>
+</style>
+<title>Custy</title></head>
+<body class="theme01" data-ez-theme="theme01">
+	
+	
+<header id="header" class="layout1" data-ez-layout="layout1" data-ez="contents-1kbhajm-1">
+	<ez-prop data-version="1.0.0" type="layout">
+		<ez-var data-prop="layout" data-namespace="ez.layout.header.layout" data-type="array">
+				
+			</ez-item></ez-var></ez-prop><div class="inner">
+		<div class="toparea display_pc_only">
+			<div class="toparea_shoppinginfo">
+			<div data-ez-group="shopping-info" data-ez-role="list">
+				
+                </div>
+				
+				
+			</div>
+			
+		</div>
+		
+		
+		<div class="top_nav_box" id="top_nav_box">
+			<div class="xans-element- xans-layout xans-layout-logotop top_logo "><a href="index"><img src="images/logo1.jpg" alt="Custy"></a>
+</div>
+
+ 
+			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
+
+			<div data-ez-module="menu-main/1" data-ez-mode="manual">
+        <div class="xans-element- xans-layout xans-layout-category top_category">
+<ul><li><a href="best">BEST</a></li>
+	<li><a href="new">NEW</a></li>
+	    <li><a href="outer">OUTER</a></li>
+	    <li><a href="top">TOP</a></li>
+	    <li><a href="pants">PANTS</a></li>
+	    <li><a href="#">SHOW</a></li></ul></div>
+      </div>
+
+			
+</header>
+<aside id="aside" data-ez="contents-10vyvnw-1" class="xans-element- xans-layout xans-layout-slidepackage "><div class="navigation_member">
+		<div class="xans-element- xans-layout xans-layout-logotop side_logo "><a href="index"><img src="//ecimg.cafe24img.com/pg1347b96994172014/tjdus0817/web/upload/category/logo/v2_8ad3aabeaee740cc84f6c46cecd72732_80MIAVnfK1_top.jpg" alt="Custy"></a>
+</div>
+
+		
+
+	</div>
+
+<nav class="navigation-menu" role="navigation"><div data-ez-module="menu-side/1"><div id="slideCateList" class="navigation-menu__category">
+  <ul id="slide_add_category">
+	<li><a href="best">BEST</a></li>
+		    <li><a href="new">NEW</a></li>
+		    <li><a href="outer">OUTER</a></li>
+		    <li><a href="top">TOP</a></li>
+		    <li><a href="pants">PANTS</a></li>
+		    <li><a href="#">SHOW</a></li>
+</ul>
+</div>
+</div>
+		<div class="cboth slide_line"></div>
+
+</div>
+  
+</aside>
+<div id="container" data-ez="layout-0g1qxbv-1">
+			<div id="contents">
+				<span class="xans-element- xans-layout xans-layout-mobileaction RTMB "><a href="#none" onclick="history.go(-1);return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon"><path d="M7.29976 12.5L14.9998 20.1C15.3998 20.5 15.9998 20.5 16.3998 20.1C16.7998 19.7 16.7998 19.1 16.3998 18.7L9.49976 11.7L16.3998 4.7C16.7998 4.3 16.7998 3.7 16.3998 3.3C16.1998 3.1 15.9998 3 15.6998 3C15.3998 3 15.1998 3.1 14.9998 3.3L7.29976 10.9C6.89976 11.4 6.89976 12 7.29976 12.5C7.29976 12.4 7.29976 12.4 7.29976 12.5Z" fill="#000000"></path></svg>
+
+뒤로가기</a>
+</span>
+<div id="showroom-container" style="width: 80%; height: 0px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('showroom-container').appendChild(renderer.domElement);
+
+scene.background = new THREE.Color(0xe4e1d5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+scene.add(ambientLight);
+
+const gltfLoader = new THREE.GLTFLoader();
+const models = [];
+const modelFiles = [
+    't_shirt/red.glb',  
+    't_shirt/blue.glb', 
+    't_shirt/orange.glb', 
+    't_shirt/yellow.glb',  
+    't_shirt/model.glb'
+];
+
+
+const targetScaleRatio = 0.50;  
+const verticalStretchFactor = 2; 
+const modelSpacing = 2.7; 
+
+modelFiles.forEach((file, i) => {
+    gltfLoader.load(file, function(gltf) {
+        const model = gltf.scene;
+        
+        model.position.x = (i - (modelFiles.length - 1) / 2) * modelSpacing;
+        model.position.y = -0.05;
+        model.position.z = 1;
+        
+        scene.add(model);
+        models.push(model);
+
+        updateModelScale(model);
+    }, undefined, function(error) {
+        console.error('모델을 로드하는 동안 오류가 발생했습니다:', error);
+    });
+});
+
+camera.position.z = 11;
+
+function animate() {
+    requestAnimationFrame(animate);
+    models.forEach(model => {
+        model.rotation.y += 0.003; 
+    });
+    renderer.render(scene, camera);
+}
+animate();
+
+function updateModelScale(model) {
+    const scaleFactor = (window.innerWidth * targetScaleRatio) / 1000;
+    model.scale.set(scaleFactor, scaleFactor * verticalStretchFactor, scaleFactor); 
+}
+
+window.addEventListener('resize', function() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    models.forEach(updateModelScale);
+});
+
+
+</script>	
+
+	<div>
+	<img src="images/hh.gif">
+    </div>
+	
+
+<div app4you-smart-banner="smart-banner-admin-RES00004" app4you-smart-banner-html="true" class="xans-element- xans-smart-banner-admin xans-smart-banner-admin-RES00004 section section_full" data-ez="module-05t56ip-1" data-ez-layoutsize="full" data-ez-size-pc="1920 697" data-ez-size-mobile="720 1160" data-ez-banner-area-no="912765" style="--pc-width: 1920px; --pc-height: 697px; --mobile-width: 720px; --mobile-height: 1160px; margin-bottom: 120px; display: none;" data-ez-display="hidden"><style>
+  @media all and (min-width: 720px) {
+    [data-ez="module-05t56ip-1"].xans-smart-banner-admin.section.section_fixed {
+      max-width: none !important;
+      width: auto !important;
+	 
+    }
+    [data-ez="module-05t56ip-1"].xans-smart-banner-admin.section.section_fixed img {
+      width: auto !important;
+      max-width: none !important;
+      margin: 100%;
+      display: block;
+	 
+    }
+  }
+  @media all and (max-width: 720px) {
+    [data-ez="module-05t56ip-1"].xans-smart-banner-admin.section.section_fixed {
+      max-width: 100% !important;
+    }
+    [data-ez="module-05t56ip-1"].xans-smart-banner-admin.section.section_fixed img {
+      width: auto !important;
+      max-width: none !important;
+      margin: 100%;
+      display: block;
+	  
+    }
+  }
+  </style>
+  
+  
+  <div data-slider="true" data-type="full" data-mode="fade" data-minslides="1" data-maxslides="10" data-controls="true" data-adaptiveheight="true" data-autohover="true" data-responsive="true" class="smart-banner-wrapper circle" data-pager="true" data-auto="true" data-speed="500" data-pause="6000" data-banner-size-width="1920" data-banner-size-height="697">
+    <ul style="width: auto; position: relative; visibility:hidden" class="smart-banner-bxslider"><li><a href="javascript:void(0)%5C;" style="cursor:default">
+          <picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/tjdus0817/378f047a-9c47-4871-a7eb-d28b3a1e87c1.png"><img src="https://file.cafe24cos.com/banner-admin-live/upload/tjdus0817/4bc738a2-d76b-47a3-96a9-9b8c99db33c8.png"></source></picture></a></li>
+      <li><a href="javascript:void(0)%5C;" style="cursor:default">
+          <picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/tjdus0817/5d63b2da-0729-4b8e-80a7-fc1403ecbae2.png"><img src="https://file.cafe24cos.com/banner-admin-live/upload/tjdus0817/9ae0e533-2403-4d9f-8e90-dbeb53ce0b21.png"></source></picture></a></li>
+    </ul></div>
+</div>
+
+<section class="section main_image_text_gallery" data-ez-module="image-gallery/2" data-ez-role="style.background" data-ez-item-length="3" data-ez="contents-086f38q-1"><ez-prop data-version="1.0.0" type="layout"><ez-var data-prop="image" data-namespace="ez.module.image-gallery.image"><ez-item data-id="size" data-pc="396 240" data-mobile="396 240"></ez-item></ez-var><ez-var data-prop="display" data-namespace="ez.module.image-gallery.display"><ez-item data-id="item" data-max="10"></ez-item><ez-item data-id="column" data-default="3" data-min="1" data-max="5"></ez-item></ez-var><ez-var data-prop="layout" data-namespace="ez.module.image-gallery.layout"><ez-item data-id="mobile" data-default="slide"><ez-item data-id="options" data-type="array"><ez-item data-id="slide" data-name="슬라이드"></ez-item><ez-item data-id="more" data-name="더보기"></ez-item><ez-item data-id="none" data-name="사용안함"></ez-item></ez-item></ez-item></ez-var></ez-prop><div class="main_title ez-align-center" data-ez-role="ez-align" data-ez-align="center"><!-- 온스토리 타이틀 수정하는곳 -->
+		<div class="main_title_txt01" data-ez-role="title"></div>
+		<div class="main_title_txt02" data-ez-role="desc"></div>
+	</div>
+
+	<style>
+	  .ez-column-3 li {
+	    padding: 5px; 
+	  }
+	  .ez-column-3 li img {
+	    padding: 5px; 
+	  }
+	</style>
+
+	
+	
+	
+    <div class="main_3dan_banner ez-mobile-layout-slide" data-ez-role="ez-mobile-layout" data-ez-mobile-layout="slide">
+         <ul data-ez-role="image-list ez-column" class="ez-column-3" data-ez-column="3"><li data-ez-role="image-item ez-align">
+				<a data-ez-role="a" href="#" target="_self">
+					<picture><source srcset="https://ecimg.cafe24img.com/pg1347b96994172014/tjdus0817/web/upload/ezst/image/ez-image-contents-086f38q-1-0k03hqo-4.jpg?v=1726820467189" media="(max-width: 1024px)" data-ez-role="img-pc" data-ez-eb><img src="images/shopnow.jpg" style = "width : 1000% " data-ez-role="img-mobile">
+					 </source></picture><div class="main_banner_txt">
+						<div class="main_banner_txt01" data-ez-role="title" style="color: rgb(58, 58, 58);">[SHOP NOW]</div>
+						<div class="main_banner_more" data-ez-role="desc" style="color: rgb(154, 154, 154);"></div>
+					</div>
+				</a>
+            </li><li data-ez-role="image-item ez-align">
+				<a data-ez-role="a" href="#" target="_self">
+					<picture><source srcset="https://ecimg.cafe24img.com/pg1347b96994172014/tjdus0817/web/upload/ezst/image/ez-image-contents-086f38q-1-09fgj19-4.jpg?v=1726820565667" media="(max-width: 1024px)" data-ez-role="img-pc" data-ez-eb><img src="images/customize2.jpg" data-ez-role="img-mobile">
+					 </source></picture><div class="main_banner_txt">
+						<div class="main_banner_txt01" data-ez-role="title" style="color: rgb(58, 58, 58);">[CUSTOMIZE]</div>
+						<div class="main_banner_more" data-ez-role="desc" style="color: rgb(154, 154, 154);"></div>
+					</div>
+				</a>
+            </li><li data-ez-role="image-item ez-align">
+				<a data-ez-role="a" href="#" target="_self">
+					<picture><source srcset="https://ecimg.cafe24img.com/pg1347b96994172014/tjdus0817/web/upload/ezst/image/ez-image-contents-086f38q-1-1titwqz-4.jpg?v=1726820673769" media="(max-width: 1024px)" data-ez-role="img-pc" data-ez-eb><img src="images/showroom2.jpg" data-ez-role="img-mobile">
+					 </source></picture><div class="main_banner_txt">
+						<div class="main_banner_txt01" data-ez-role="title" style="color: rgb(58, 58, 58);">[SHOW ROOM]</div>
+						<div class="main_banner_more" data-ez-role="desc" style="color: rgb(154, 154, 154);"></div>
+					</div>
+				</a>
+            </li></ul><div class="main_image_text_gallery_more"><a href="#none" class="main_image_text_gallery_more_btn">더보기</a></div>
+	</div>
+</section><section class="section main_product_list" data-ez-module="product-list/1" data-ez-layout="grid4" data-ez="contents-1jq66zr-1">
+	<ez-prop data-version="1.0.0" type="layout"><ez-var data-prop="layout" data-namespace="ez.module.product-list.layout" data-type="array">
+		
+		</ez-item></ez-var></ez-prop><div class="main_title ez-align-center" data-ez-role="ez-align" data-ez-align="center">
+			
+		
+	
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/common/27f65f13d65624198b9d0001bceb94548239d4a9.d69323deaf6eae17cc58c2908dd3f0df/1726827827" crossorigin="anonymous" /><link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/tjdus0817/c572c4707041bb39efc8e08ba9fafe139fcbc713.d69323deaf6eae17cc58c2908dd3f0df/1726819406" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custy-ShowRoom</title>
+    <style>
+        canvas {
+            width: 1680px!important; 
+            height: 450px !important;
+        }
+        #showroom-container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1500px;
+        }    
+        .icon-container li {
+            flex: 1;
+            text-align: center;
+        }
+        .icon-container img {
+            width: 240px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .icon-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- 기존 헤더 및 네비게이션 섹션 -->
+<header id="header" class="layout1" data-ez-layout="layout1" data-ez="contents-1kbhajm-1">
+    <div class="inner">
+        <div class="toparea display_pc_only">
+            <div class="toparea_shoppinginfo">
+                <div data-ez-group="shopping-info" data-ez-role="list"></div>
+            </div>
+        </div>
+        <div class="top_nav_box" id="top_nav_box">
+            <div class="xans-element- xans-layout xans-layout-logotop top_logo">
+                <a href="index"><img src="images/logo1.jpg" alt="Custy"></a>
+            </div>
+            <div class="top_nav">
+                <a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a>
+            </div>
+            <div data-ez-module="menu-main/1" data-ez-mode="manual">
+                <div class="xans-element- xans-layout xans-layout-category top_category">
+                    <ul>
+                        <li><a href="best">BEST</a></li>
+                        <li><a href="new">NEW</a></li>
+                        <li><a href="outer">OUTER</a></li>
+                        <li><a href="top">TOP</a></li>
+                        <li><a href="pants">PANTS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- 사이드바 -->
+<aside id="aside" data-ez="contents-10vyvnw-1" class="xans-element- xans-layout xans-layout-slidepackage">
+    <div class="navigation_member">
+        <div class="xans-element- xans-layout xans-layout-logotop side_logo">
+            <a href="index"><img src="//ecimg.cafe24img.com/pg1347b96994172014/tjdus0817/web/upload/category/logo/v2_8ad3aabeaee740cc84f6c46cecd72732_80MIAVnfK1_top.jpg" alt="Custy"></a>
+        </div>
+    </div>
+    <div class="cboth slide_line"></div>
+</aside>
+
+<!-- 메인 콘텐츠 섹션 -->
+<div id="container" data-ez="layout-0g1qxbv-1">
+    <div id="contents">
+        <span class="xans-element- xans-layout xans-layout-mobileaction RTMB">
+            <a href="#none" onclick="history.go(-1);return false;"></a>
+        </span>
+        <!-- 쇼룸 컨테이너 -->
+        <div id="showroom-container"></div>
+        <!-- 브랜드 아이콘 리스트 -->
+        <div class="main_3dan_banner ez-mobile-layout-slide" data-ez-role="ez-mobile-layout" data-ez-mobile-layout="slide">
+            <ul class="icon-container">
+                <li><img src="images/nikeicon.png" alt="Nike Icon" class="brand-icon" data-model="0"></li>
+                <li><img src="images/adidasicon.png" alt="Adidas Icon" class="brand-icon" data-model="1"></li>
+                <li><img src="images/vansicon.png" alt="Vans Icon" class="brand-icon" data-model="2"></li>
+                <li><img src="images/newbalanceicon.png" alt="New Balance Icon" class="brand-icon" data-model="3"></li>
+                <li><img src="images/converseicon.png" alt="Converse Icon" class="brand-icon" data-model="4"></li>
+                <li><img src="images/asicicon.png" alt="Asics Icon" class="brand-icon" data-model="5"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+    // Three.js 설정
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 10;
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('showroom-container').appendChild(renderer.domElement);
+    scene.background = new THREE.Color(0xe4e1d5);
+    //const textureLoader = new THREE.TextureLoader();
+    //const backgroundTexture = textureLoader.load('showbg.png');
+    //scene.background = backgroundTexture;
+    //조명
+    //const ambientLight = new THREE.AmbientLight(0xffffff, 1); 
+	//scene.add(ambientLight);
+    const pointLight = new THREE.PointLight(0xffffff, 1.3, 1000); // 색상, 강도, 거리 설정
+    pointLight.position.set(0, 5, 30);
+    scene.add(pointLight);
+
+
+    const gltfLoader = new THREE.GLTFLoader();
+    let models = [];
+    const spacing = 7.7;
+
+    const modelSets = [
+        ['t_shirt/nike1.glb', 't_shirt/nike2.glb', 't_shirt/nike3.glb', 't_shirt/nike4.glb', 't_shirt/nike5.glb'],
+        ['t_shirt/adidas1.glb', 't_shirt/adidas2.glb', 't_shirt/adidas3.glb', 't_shirt/adidas4.glb', 't_shirt/adidas5.glb'],
+        ['t_shirt/vans1.glb', 't_shirt/vans2.glb', 't_shirt/vans3.glb', 't_shirt/vans4.glb', 't_shirt/vans5.glb'],
+        ['t_shirt/new balance1.glb', 't_shirt/new balance2.glb', 't_shirt/new balance3.glb', 't_shirt/new balance4.glb', 't_shirt/new balance5.glb'],
+        ['t_shirt/converse1.glb', 't_shirt/converse2.glb', 't_shirt/converse3.glb', 't_shirt/converse4.glb', 't_shirt/converse5.glb'],
+        ['t_shirt/asics1.glb', 't_shirt/asics2.glb', 't_shirt/asics3.glb', 't_shirt/asics4.glb', 't_shirt/asics5.glb']
+    ];
+    function loadModels(modelFiles) {
+        models.forEach(model => scene.remove(model)); 
+        models = []; 
+
+        modelFiles.forEach((file, index) => {
+            gltfLoader.load(file, function(gltf) {
+                const model = gltf.scene;
+                model.position.x = (index - (modelFiles.length - 1) / 2) * spacing;
+                model.position.y = -0.65;
+                model.position.z = 1;
+                model.scale.set(2, 3, 2);
+
+                scene.add(model);
+                models.push(model);
+            }, undefined, function(error) {
+                console.error('모델을 로드하는 동안 오류가 발생했습니다:', error);
+            });
+        });
+    }
+    camera.position.z = 45; 
+    loadModels(modelSets[0]);
+
+    function animate() {
+        requestAnimationFrame(animate);
+        models.forEach(model => {
+            model.rotation.y += 0.004; 
+        }); 
+        renderer.render(scene, camera);
+    }
+    animate();
+
+window.addEventListener('resize', function() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+    document.querySelectorAll('.brand-icon').forEach(icon => {
+        icon.addEventListener('click', function() {
+            const modelIndex = this.getAttribute('data-model');
+            loadModels(modelSets[modelIndex]);
+        });
+    });
+</script>
+
+</body>
+</html>

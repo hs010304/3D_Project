@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>상품 쇼핑</title>
+    <style>
+        /* 스타일을 여기서 작성 */
+    </style>
+</head>
+<body>
+    <h1>상품 쇼핑 페이지</h1>
+    <div class="product-list" th:each="product : ${shoptest}">
+        <div class="product-card">
+			<a th:href="@{/products/{id}(id=${product.id})}">
+			    <img th:src="@{${product.imageFile}}" alt="상품 이미지" />
+			    <h3 th:text="${product.name}">상품 이름</h3>
+			</a>
+            <p th:text="${product.price}">상품 가격</p>
+        </div>
+    </div>
+</body>
+</html>

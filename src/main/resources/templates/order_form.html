@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order Form</title>
+</head>
+<body>
+    <h1>상품 주문</h1>
+
+    <form th:action="@{/order}" th:object="${orderForm}" method="post">
+        <div th:each="product : ${availableProducts}">
+            <!-- 체크박스: 상품 선택 -->
+            <input type="checkbox" th:field="*{orderItems[__${product.id}__].selected}" th:value="${product.id}"/>
+            <span th:text="${product.name}"></span>
+
+            <!-- 수량 입력 -->
+            <input type="number" th:field="*{orderItems[__${product.id}__].quantity}" min="1" value="1"/>
+            
+            <span th:text="${product.price}">가격</span>
+        </div>
+
+        <button type="submit">주문하기</button>
+    </form>
+</body>
+</html>

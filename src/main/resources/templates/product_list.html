@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/common/27f65f13d65624198b9d0001bceb94548239d4a9.d69323deaf6eae17cc58c2908dd3f0df/1726827827" crossorigin="anonymous" /><link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/tjdus0817/c572c4707041bb39efc8e08ba9fafe139fcbc713.d69323deaf6eae17cc58c2908dd3f0df/1726819406" crossorigin="anonymous" />
+
+
+<title>Custy</title></head>
+<body class="theme01" data-ez-theme="theme01">
+	
+<header id="header" class="layout1" data-ez-layout="layout1" data-ez="contents-1kbhajm-1">
+	<ez-prop data-version="1.0.0" type="layout">
+		<ez-var data-prop="layout" data-namespace="ez.layout.header.layout" data-type="array">
+				
+			</ez-item></ez-var></ez-prop><div class="inner">
+		<div class="toparea display_pc_only">
+			<div class="toparea_shoppinginfo">
+			<div data-ez-group="shopping-info" data-ez-role="list">
+				
+                </div>
+								
+			</div>
+			
+		</div>
+		
+		<div class="top_nav_box" id="top_nav_box">
+			<div class="xans-element- xans-layout xans-layout-logotop top_logo "><a href="index"><img src="images/logo1.jpg" alt="Custy"></a>
+</div>
+
+<!--style>
+table {
+	border-collapse: collapse; /* 테두리 겹침 제거 */
+	width: 100%; /* 테이블 폭을 100%로 설정 */
+}
+
+th, td {
+	border: 1px solid #ddd; /* 테두리 스타일 */
+	padding: 15px; /* 내부 여백 추가 */
+	text-align: left; /* 왼쪽 정렬 */
+}
+
+th {
+	background-color: #f2f2f2; /* 헤더 배경색 */
+}
+
+img {
+	max-width: 100px; /* 이미지 최대 폭 */
+	height: auto; /* 비율 유지 */
+}
+
+.form-inline {
+	display: flex;
+	align-items: center;
+}
+
+.form-inline input, .form-inline select {
+	margin-right: 5px; /* 폼 요소 간의 간격 */
+}
+</style-->
+
+</head>
+
+<body>
+	<h1>상품 목록</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>상품번호</th>
+				<th>상품이름</th>
+				<th>가격</th>
+				<th>재고</th>
+				<th>설명</th>
+				<th>이미지</th>
+				<th>사이즈</th>
+				<th>카테고리</th>
+				<th>삭제</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="product : ${products}">
+				<td th:text="${product.id}"></td>
+
+				<!-- 상품 이름 수정 폼 -->
+				<td>
+					<form th:action="@{/products/updateName(id=${product.id})}"
+						method="post" class="form-inline">
+						<input type="text" th:name="'name'" th:value="${product.name}"
+							required />
+						<button type="submit">변경</button>
+					</form>
+				</td>
+
+				<!-- 가격 수정 폼 -->
+				<td>
+					<form th:action="@{/products/updatePrice(id=${product.id})}"
+						method="post" class="form-inline">
+						<input type="number" th:name="'price'" th:value="${product.price}"
+							required /> 원
+						<button type="submit">변경</button>
+					</form>
+				</td>
+
+				<!-- 재고 수정 폼 -->
+				<td>
+					<form th:action="@{/products/updateStock(id=${product.id})}"
+						method="post" class="form-inline">
+						<input type="number" th:name="'stock'" th:value="${product.stock}"
+							required /> 개
+						<button type="submit">변경</button>
+					</form>
+				</td>
+
+				<!-- 설명 수정 폼 -->
+				<td>
+					<form th:action="@{/products/updateDescription(id=${product.id})}"
+						method="post" class="form-inline">
+						<input type="text" th:name="'description'"
+							th:value="${product.description}" required />
+						<button type="submit">변경</button>
+					</form>
+				</td>
+
+				<!-- 이미지 수정 폼 -->
+				<td>
+					<!-- 기존 이미지 표시 --> <img th:src="@{${product.imageFile}}"
+					alt="상품 이미지" style="max-width: 100px; height: auto;" /> <!-- 이미지 수정 폼 -->
+					<form th:action="@{/products/updateImage}" method="post"
+						enctype="multipart/form-data">
+						<input type="hidden" th:name="id" th:value="${product.id}" /> <input
+							type="file" name="imageFile" />
+						<button type="submit">변경</button>
+					</form>
+				</td>
+
+				</form>
+				</td>
+
+				<!-- 사이즈 수정 폼 -->
+				<td>
+					<form th:action="@{/products/updateSize(id=${product.id})}"
+						method="post" class="form-inline">
+						<input type="text" th:name="'size'" th:value="${product.size}"
+							required />
+						<button type="submit">변경</button>
+					</form>
+				</td>
+
+				<!-- 카테고리 수정 폼 -->
+				<td>
+					<form th:action="@{/products/updateCategory(id=${product.id})}"
+						method="post" class="form-inline">
+						<select th:name="'category'" required>
+						
+							<option value="OUTER"
+								th:selected="${product.category.name() == 'OUTER'}">OUTER</option>
+							<option value="TOP"
+								th:selected="${product.category.name() == 'TOP'}">TOP</option>
+							<option value="PANTS"
+								th:selected="${product.category.name() == 'PANTS'}">PANTS</option>
+						</select>
+						<button type="submit">변경</button>
+					</form>
+				</td>
+
+				<td>
+					<form th:action="@{/products/delete(id=${product.id})}"
+						method="post">
+						<button type="submit">삭제</button>
+					</form>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="/products/add">상품 추가하기</a>
+</body>
+</html>

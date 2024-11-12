@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?>
+<html lang="ko"><head>
+
+<link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/common/e958a7ce19a499e97b8d9f2acc5bda9003d94962.d69323deaf6eae17cc58c2908dd3f0df/1727335832" crossorigin="anonymous" /><link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/tjdus0817/5187c6cc0291f01402c0275368a70d07d26c31c5.d69323deaf6eae17cc58c2908dd3f0df/1727335832" crossorigin="anonymous" />
+<style type="text/css">
+</style>
+
+<title>Custy</title></head><body id="userStyle"> 
+    <header id="header"><div id="ec-orderform-header-head"></div>
+
+    <div class="header">
+        <h1 class="xans-element- xans-layout xans-layout-logotop "><a href="index"><img src="images/LOGO.jpg"></a>
+</h1>
+        <div class="headerMenu gLeft">
+            <span class="xans-element- xans-layout xans-layout-mobileaction btnBack "><a href="#none" onclick="document.referrer ? history.go(-1) : location.href='/skin-skin2';return false;">뒤로가기</a>
+</span>
+        </div>
+        <div class="headerMenu gRight">
+            <span class="xans-element- xans-layout xans-layout-orderbasketcount btnBasket "><a href="cart">장바구니
+				<span class="count  EC-Layout_Basket-count-display">
+					<span class="EC-Layout-Basket-count">0</span></span></a>
+</span>
+                        <a href="mypage" class="xans-element- xans-layout xans-layout-statelogon btnMy ">마이쇼핑</a>
+        </div>
+    </div>
+    <div class="titleArea">
+        <h1>주문/결제</h1>
+    </div>
+
+    <div id="ec-orderform-header-tail"></div>
+</header><div id="titleArea" class="titleArea">
+    <h1>주문/결제</h1>
+</div>
+
+    <form id="frm_order_act" name="frm_order_act" action="" method="post" target="_self" enctype="multipart/form-data" >
+
+<input id="sEleID" name="sEleID" value="" type="hidden"  />
+<div id="mCafe24Order" class="xans-element- xans-order xans-order-form typeHeader xans-record-">
+            
+<div id="ec-jigsaw-area-productdetail">
+    </div>
+
+<div class="billingNshipping">
+    <!-- 주문자정보 -->
+    <div id="ec-jigsaw-area-billingInfo" class="ec-base-fold eToggle selected displaynone">
+        <div id="ec-jigsaw-title-billingInfo" class="title">
+            <h2>주문 정보</h2>
+            <span id="ec-jigsaw-heading-billingInfo" class="txtEm gRight"></span>
+        </div>
+        <div class="contents ec-shop-ordererForm">
+            <div class="ec-base-table typeWrite">
+                <table border="1">
+<caption>주문자 정보 입력</caption>
+                    <colgroup>
+<col style="width:102px">
+<col style="width:auto">
+</colgroup>
+<tbody class="address_form ">
+<tr>
+<th scope="row">주문자 <span class="icoRequired">필수</span>
+</th>
+                        <td></td>
+                    </tr>
+<tr class="ec-orderform-emailRow ">
+<th scope="row">이메일 <span class="icoRequired icon_order_email">필수</span>
+</th>
+                        <td>
+                            <div class="ec-base-mail">
+            <input id="oemail1" name="oemail1" fw-filter="isFill" fw-label="주문자 이메일" fw-alone="N" fw-msg="" class="mailId" value="" type="text"  />@
+            <span class="mailAddress">
+            <select id="oemail3" fw-filter="isFill" fw-label="주문자 이메일" fw-alone="N" fw-msg=""  >
+<option value="" selected="selected">-이메일 선택-</option>
+<option value="naver.com">naver.com</option>
+<option value="daum.net">daum.net</option>
+<option value="nate.com">nate.com</option>
+<option value="gmail.com">gmail.com</option>
+<option value="etc">직접입력</option>
+</select>
+            <span class="directInput ec-compact-etc"><input id="oemail2" name="oemail2" fw-filter="isFill" fw-label="주문자 이메일" fw-alone="N" fw-msg="" placeholder="직접입력" readonly="readonly" value="" type="text"  /></span>
+            </span>
+        </div>
+                        </td>
+                    </tr>
+<tr class="displaynone">
+<th scope="row">일반전화 <span class="displaynone"><span class="icoRequired">필수</span></span>
+</th>
+                        <td><div class="ec-base-mail"></div></td>
+                    </tr>
+<tr class="displaynone">
+<th scope="row">휴대전화 <span class="displaynone"><span class="icoRequired">필수</span></span>
+</th>
+                        <td><div class="ec-base-mail"></div></td>
+                    </tr>
+<tr id="ec-orderer-address">
+<th scope="row">주소 <span class="displaynone"><span class="icoRequired">필수</span></span>
+</th>
+                        <td>
+                                                    </td>
+                    </tr>
+</tbody>
+</table>
+</div>
+        </div>
+    </div>
+
+    <!-- 배송정보  -->
+    <div id="lShippingCompanyLists" class="ec-area-shipping-companies ec-base-fold eToggle selected displaynone">
+        <div class="title">
+            <h2>상품 수령</h2>
+        </div>
+        <div class="contents">
+            
+<ul class="ec-base-help" id="delivery_app_info">
+<li class="txtEm" id="delivery_app_shipfee_div">배송비 : <span id='delivery_app_shipfee'></span></li>
+                    <li id="delivery_app_description_div">배송안내 : <span id='delivery_app_description'></span></li>
+                </ul>
+</div>
+        </div>
+    </div>
+
+    <!-- 수령자 정보   -->
+    <div id="ec-jigsaw-area-shippingInfo" class="ec-base-fold eToggle selected">
+        <div id="ec-jigsaw-title-shippingInfo" class="title">
+            <h2>배송지</h2>
+        </div>
+        <div class="contents">
+          
+            <div id="ec-orderform-billingNshipping-head"></div>
+            
+            <div class="">
+                <div id="ec-jigsaw-tab-shippingInfo" class="ec-base-tab ">
+                    <ul>
+
+                        <li id="ec-jigsaw-tab-shippingInfo-newAddress"><a href="#none">직접입력</a></li>
+                    </ul>
+</div>
+               
+                <!-- 새 배송지 -->
+                <div id="ec-shippingInfo-newAddress" class="tabCont newShipArea ">
+                    <div class="segment ec-shippingInfo-sameaddr ">
+                        <input id="sameaddr0" name="sameaddr" fw-filter="" fw-label="1" fw-msg="" value="M" type="radio"  /><label for="sameaddr0" >회원 정보와 동일</label>
+<input id="sameaddr1" name="sameaddr" fw-filter="" fw-label="1" fw-msg="" value="F" type="radio"  /><label for="sameaddr1" >새로운 배송지</label>                    </div>
+                    <div class="ec-base-table typeWrite">
+                        <table border="1">
+<caption>배송 정보 입력</caption>
+                            <colgroup>
+<col style="width:102px">
+<col style="width:auto">
+</colgroup>
+<tbody>
+<tr class="ec-shippingInfo-newAddress-name">
+<th scope="row">받는사람 <span class="icoRequired">필수</span>
+</th>
+                                <td><input id="rname" name="rname" fw-filter="isFill" fw-label="수취자 성명" fw-msg="" class="inputTypeText" placeholder="" size="15" value="" type="text"  /></td>
+                            </tr>
+<tr id="ec-receiver-address">
+<th scope="row">주소 <span class=""><span class="icoRequired">필수</span>
+	<td><input id="rname" name="rname" fw-filter="isFill" fw-label="수취자 성명" fw-msg="" class="inputTypeText" placeholder="" size="15" value="" type="text"  /></td>
+	                            </tr> </span>
+</th>
+                        
+           
+
+<tr class="ec-shippingInfo-receiverCell ">
+<th scope="row">휴대전화 <span class=""><span class="icoRequired">필수</span></span>
+</th>
+                                <td><div class="ec-base-mail"><select id="rphone2_1" name="rphone2_[]" fw-filter="isNumber&isFill" fw-label="수취자 핸드폰번호" fw-alone="N" fw-msg=""  >
+<option value="010">010</option>
+<option value="011">011</option>
+
+</select><input id="rphone2_2" name="rphone2_[]" maxlength="4" fw-filter="isNumber&isFill" fw-label="수취자 핸드폰번호" fw-alone="N" fw-msg="" placeholder="" size="4" value="" type="text"  />-<input id="rphone2_3" name="rphone2_[]" maxlength="4" fw-filter="isNumber&isFill" fw-label="수취자 핸드폰번호" fw-alone="N" fw-msg="" placeholder="" size="4" value="" type="text"  /></div></td>
+                            </tr>
+<tr class="ec-orderform-emailRow ec-shop-deliverySimpleForm ">
+<th scope="row">이메일 <span class="icoRequired icon_order_email">필수</span>
+</th>
+                                <td>
+                                    <div class="ec-base-mail">
+            <input id="oemail1" name="oemail1" fw-filter="isFill" fw-label="주문자 이메일" fw-alone="N" fw-msg="" class="mailId" value="" type="text"  />@
+            <span class="mailAddress">
+            <select id="oemail3" fw-filter="isFill" fw-label="주문자 이메일" fw-alone="N" fw-msg=""  >
+<option value="" selected="selected">-이메일 선택-</option>
+<option value="naver.com">naver.com</option>
+<option value="daum.net">daum.net</option>
+<option value="nate.com">nate.com</option>
+<option value="gmail.com">gmail.com</option>
+<option value="etc">직접입력</option>
+</select>
+            <span class="directInput ec-compact-etc"><input id="oemail2" name="oemail2" fw-filter="isFill" fw-label="주문자 이메일" fw-alone="N" fw-msg="" placeholder="직접입력" readonly="readonly" value="" type="text"  /></span>
+            </span>
+        </div>
+                                </td>
+                            </tr>
+</tbody>
+</table>
+</div>
+</div>
+               
+            <!-- 국내배송 메시지 -->
+            <div class="ec-shippingInfo-shippingMessage segment unique  ">
+                <select id="omessage_select" name="omessage_select" fw-filter="" fw-label="배송 메세지" fw-msg=""  >
+<option value="oMessage-0" selected="selected">-- 메시지 선택 (선택사항) --</option>
+<option value="oMessage-1">배송 전에 미리 연락바랍니다.</option>
+<option value="oMessage-2">부재 시 경비실에 맡겨주세요.</option>
+<option value="oMessage-3">부재 시 문 앞에 놓아주세요.</option>
+<option value="oMessage-4">빠른 배송 부탁드립니다.</option>
+<option value="oMessage-5">택배함에 보관해 주세요.</option>
+<option value="oMessage-input">직접 입력</option>
+</select>                
+
+           
+            <!-- 국내배송 기본 배송지 사용 -->
+            <div class="ec-shippingInfo-newAddress-setMain segment ">
+                <input id="set_main_address0" name="set_main_address[]" fw-filter="" fw-label="기본 배송지로 저장" fw-msg="" value="T" type="checkbox"  /><label for="set_main_address0" >기본 배송지로 저장</label>            </div>
+</div>
+    </ec-jigsawpiece><ec-jigsawpiece print="always"><div id="ec-orderform-guest-head"></div>
+
+        
+        <div id="ec-orderform-guest-tail"></div>
+    </ec-jigsawpiece></ec-jigsaw>
+</div>
+    </div>
+
+<div id="ec-jigsaw-area-additionalInput" class="ec-base-fold eToggle selected displaynone">
+    <div id="ec-jigsaw-title-additionalInput" class="title">
+        <h2>추가입력</h2>
+    </div>
+    <div class="contents">
+      
+        <div id="ec-orderform-additionalInput-head"></div>
+        
+        <div class="addArea displaynone">
+            <div class="ec-base-table typeWrite">
+                <table border="1">
+<caption>추가입력</caption>
+                    <colgroup>
+<col style="width:115px">
+<col style="width:auto">
+</colgroup><tbody class="xans-element- xans-order xans-order-ordadd"><tr class="">
+<th scope="row"> <span class=""></span>
+</th>
+                        <td></td>
+                    </tr>
+</tbody>
+</table>
+</div>
+        </div>
+        
+        <div class="questionArea displaynone">
+            <div class="ec-base-table typeWrite">
+                <table border="1">
+<caption>기타 문의사항</caption>
+                    <colgroup>
+<col style="width:115px">
+<col style="width:auto">
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">기타 문의사항</th>
+                        <td>
+                            <textarea id="question" name="question" fw-filter="" fw-label="기타문의사항" fw-msg="" maxlength="255" cols="70" ></textarea>                            <p class="ec-base-help"><a href="/skin-skin2/board/product/list.html?board_no=6" target="_blank">상품 Q&A</a>에 자동 저장됩니다.</p>
+                        </td>
+                    </tr>
+<tr>
+<th scope="row">비밀번호</th>
+                        <td><input id="question_passwd" name="question_passwd" fw-filter="" fw-label="기타문의사항 비밀번호" fw-msg="" value="" type="password"  /> <p class="ec-base-help displaynone">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+</td>
+                    </tr>
+</tbody>
+</table>
+</div>
+        </div>
+        
+        <div id="ec-orderform-additionalInput-tail"></div>
+    </div>
+</div>
+
+<div id="ec-jigsaw-area-orderProduct" class="ec-base-fold eToggle">
+    <div id="ec-jigsaw-title-orderProduct" class="title">
+        <h2>주문상품</h2>
+        <span id="ec-jigsaw-heading-orderProduct" class="txtStrong gRight">1개</span>
+    </div>
+    <div class="contents">
+        
+        <div id="ec-orderform-orderProduct-head"></div>
+        
+        <div class="orderArea ">
+            <!-- 기본배송 -->
+            <div class="xans-element- xans-order xans-order-normallist">
+<div class="ec-base-prdInfo xans-record-">
+                    <div class="prdBox">
+                        <div class="displaynone"><input id="chk_order_cancel_list0" name="chk_order_cancel_list_basic0" value="9:000A:F:4" type="checkbox"  /></div>
+                        <div class="thumbnail"><a href="/skin-skin2/product/detail.html?product_no=9&cate_no=1"><img src="//ecimg.cafe24img.com/pg1347b96994172014/tjdus0817/web/product/tiny/20240920/e59d864351e3fd90d205c562a0f64d9b.jpg" alt="" width="90" height="90"></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명"> <a href = "/skin-skin2/product/샘플상품-1/9/category/1/" class="ec-product-name" >샘플상품 1</a></strong>
+                            <ul class="info">
+
+<div class="proPrice">
+                                <span class="displaynone">15,000원</span>
+                                <span class="displaynone"></span>
+                                <span class="display">
+                                    <span id="">15,000원 </span>
+                                    <span class="displaynone">()</span>
+                                </span>
+                            </div>
+                        </div>
+                        <button type="button" class="btnRemove " id="btn_product_one_delete_id0" prd="9:000A:F:4" set_prd_type="">삭제</button>
+                    </div>
+                </div>
+
+</div>
+            <div class="totalPrice ">
+                <div class="title">
+                    <h3>배송비</h3>
+                    <span class="deliveryFee"><span id="domestic_ship_fee">2,500</span>원</span>
+                </div>
+            </div>
+         
+
+        <div id="ec-orderform-orderProduct-tail"></div>
+    </div>
+    <div id="ec-shop-directbuy-order-product-info" class="displaynone"></div>
+</div>
+
+<div class="ec-jigsawWrapper">
+    
+    <div id="ec-orderform-discount-head"></div>
+
+    <div id="ec-jigsaw-area-discount" class="ec-base-fold eToggle selected displaynone">
+        <div id="ec-jigsaw-title-discount" class="title">
+           
+            <span id="ec-jigsaw-heading-discount" class="txtStrong gRight">
+                    -<span id="discount_total_sale_price_view">0</span>원     <span class="displaynone"><span id="discount_total_sale_price_ref_view"></span></span>
+                </span>
+        </div>
+        <div class="contents">
+            
+                    <div class="contents">
+                       
+            <div class="totalPay">
+                <h3 class="heading">적용금액</h3>
+                <div class="txtEm">
+                    -<span id="total_sale_price_view">0</span>원  <span class="refer displaynone">(<span id="total_sale_price_ref_view"></span>)</span>
+                </div>
+                <span class="displaynone" id="total_addpay_price_view">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="ec-orderform-discount-tail"></div>
+</div>
+
+<div id="ec-jigsaw-area-payment" class="ec-base-fold eToggle selected">
+    <div id="ec-jigsaw-title-payment" class="title">
+        <h2>결제정보</h2>
+    </div>
+    <div class="contents">
+        <!-- app tag -->
+        <div id="ec-orderform-payment-head"></div>
+
+        <div class="segment">
+            <div class="ec-base-table gCellNarrow">
+                <table border="1">
+<caption>결제정보 상세</caption>
+                    <colgroup>
+<col style="width:155px">
+<col style="width:auto">
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">주문상품</th>
+                        <td class="right"><span id="total_product_base_price_id" class="price">15,000원</span></td>
+                    </tr>
+<tr class="displaynone">
+<th scope="row">부가세</th>
+                        <td class="right"><span class="price"><span id="total_vat_price_id">+원</span></span></td>
+                    </tr>
+<tr class="">
+<th scope="row">배송비 <span class="displaynone info">(착불 상품 포함)</span>
+</th>
+                        <td class="right"><span class="price">+<span id="total_ship_price_id">2,500원</span></span></td>
+                    </tr>
+<tr id="total_local_ship_price_area">
+<th scope="row">지역별 배송비</th>
+                        <td class="right"><span class="price">+<span id="total_local_ship_price_id">0원</span></span></td>
+                    </tr>
+<tr class="discountView">
+<th scope="row">할인/부가결제</th>
+                        <td class="right"><span class="price"><span class="txtRed">-<span class="eRefPrice" id="payment_total_sale_price_view">0</span></span>원</span></td>
+                    </tr>
+<tr id="ec-shop-payment_discount_list_view" class="paymentList">
+<td colspan="2">
+                            <ul>
+<li id="ec-shop-payment_benefit_price2_area">
+                                    <span class="discountName"><i class="ico_auto"></i> 기본 할인</span>
+                                    <span class="price">-<span id="ec-shop-payment_benefit_price2_view"></span>원</span>
+                                </li>
+                                <li id="ec-shop-payment_shipfee_area">
+                                    <span class="discountName"><i class="ico_delivery"></i> 배송비 할인</span>
+                                    <span class="price">-<span id="ec-shop-payment_shipfee_view"></span>원</span>
+                                </li>
+                                <li id="ec-shop-payment_coupon_price2_area">
+                                    <span class="discountName"><i class="ico_copon"></i> 쿠폰 할인</span>
+                                    <span class="price">-<span id="ec-shop-payment_coupon_price2_view"></span>원</span>
+                                </li>
+                               
+                                <li id="ec-shop-payment_used_mileage_area">
+                                    <span class="discountName"><i class="ico_accumulate"></i> 적립금</span>
+                                    <span class="price">-<span id="ec-shop-payment_used_mileage_view"></span>원</span>
+                                </li>
+                                
+                                <li class="payment_affiliate_template" style="display: none;">
+                                    <span class="discountName"></span>
+                                    <span class="price">-<span id="ec-shop-payment_used_affiliate_view"></span>원</span>
+                                </li>
+                            </ul>
+</td>
+                    </tr>
+<tr id="total_tax_area_id" class="displaynone">
+<th scope="row"><span id="total_tax_name_id"></span></th>
+                        <td class="right"><span class="price">+<span id="total_tax_id">0원</span></span></td>
+                    </tr>
+</tbody>
+</table>
+</div>
+        </div>
+        <div class="totalPay paymentPrice">
+            <h3 class="heading">최종 결제 금액</h3>
+            <strong class="txtStrong">
+                <span id="payment_total_order_sale_price_view">17,500</span>원                <span class="refer displaynone">(<span id="payment_total_order_sale_price_ref_view"></span>)</span>
+            </strong>
+            <span class="displaynone"><input id="total_price" name="total_price" fw-filter="isFill" fw-label="결제금액" fw-msg="" class="inputTypeText" placeholder="" style="text-align:right;ime-mode:disabled;clear:none;border:0px;float:none;" size="10" readonly="1" value="17500" type="text"  /></span>
+        </div>
+
+        
+        <div id="ec-orderform-payment-tail"></div>
+    </div>
+</div>
+
+<div id="ec-jigsaw-area-paymethod" class="ec-base-fold eToggle selected">
+    <div id="ec-jigsaw-title-paymethod" class="title">
+        <h2>결제수단</h2>
+    </div>
+    <div class="contents">
+        <!-- app tag -->
+        <div id="ec-orderform-paymethod-head"></div>
+
+        <div class="segment">
+            <ul class="payMethod">
+<li class="ec-paymethod-recentArea displaynone ">
+                    <input type="radio" name="paymethod" id="paymethod-recent" class="" ><label for="paymethod-recent">최근 결제수단</label>
+                    <div id="ec-payment-recentPaymethodText" class="inner"></div>
+                </li>
+                <li class="ec-paymethod-newArea selected">
+                    <input type="radio" name="paymethod" id="paymethod-new" class="displaynone" checked><label for="paymethod-new"><span class="displaynone">다른 </span>결제수단 선택</label>
+                    <div class="inner">
+                        <span class="ec-base-label"><input id="addr_paymethod0" name="addr_paymethod" fw-filter="isFill" fw-label="결제방식" fw-msg="" value="cash" type="radio" checked="checked"  /><label for="addr_paymethod0" >무통장입금</label></span>                    </div>
+                </li>
+            </ul>
+</div>
+
+        <div class="ec-paymethod-input-detail">
+            <div id="payment_input_cash" class="ec-base-table typeWrite">
+                <table border="1">
+<caption>무통장입금 정보 입력</caption>
+                    <colgroup>
+<col style="width:100px">
+<col style="width:auto">
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">입금은행 <span class="icoRequired">필수</span>
+</th>
+                        <td><select id="bankaccount" name="bankaccount" fw-filter="" fw-label="무통장 입금은행" fw-msg=""  >
+<option value="-1">::: 선택해 주세요. :::</option>
+</select></td>
+                    </tr>
+<tr>
+<th scope="row">입금자명 <span class="icoRequired">필수</span>
+</th>
+                        <td><input id="pname" name="pname" fw-filter="" fw-label="무통장 입금자명" fw-msg="" class="inputTypeText" placeholder="" size="15" maxlength="20" value="" type="text"  /></td>
+                    </tr>
+</tbody>
+</table>
+</div>
+
+            <div id="payment_input_tcash" class="ec-base-table typeWrite">
+                <table border="1">
+<caption>실시간 계좌이체 정보 입력</caption>
+                    <colgroup>
+<col style="width:100px">
+<col style="width:auto">
+</colgroup>
+<tbody><tr>
+<th scope="row">예금주명 <span class="icoRequired">필수</span>
+</th>
+                        <td></td>
+                    </tr></tbody>
+</table>
+</div>
+
+            
+            <div id="payment_input_icash" class="ec-base-table typeWrite">
+                <table border="1">
+<caption>에스크로(가상계좌)</caption>
+                    <colgroup>
+<col style="width:100px">
+<col style="width:auto">
+</colgroup>
+<tbody><tr>
+<th scope="row">에스크로</th>
+                        <td><input id="flagEscrowIcashUse0" name="flagEscrowIcashUse" fw-filter="" fw-label="에스크로(구매안전)" fw-msg="" value="T" type="checkbox"  /><label for="flagEscrowIcashUse0" ></label><label for="flagEscrowIcashUse0">에스크로(구매안전)서비스를 적용합니다.</label>
+</td>
+                    </tr></tbody>
+</table>
+</div>
+
+            
+            <!-- 결제수단 도움말 -->
+            <div class="helpArea">
+                <!-- 무통장입금, 카드결제, 휴대폰결제, 실시간계좌이체, 페이팔, 엑심베이, 엑시즈, 알리페이 -->
+                <ul id="pg_paymethod_info" class="ec-base-help typeDash">
+<li id="pg_paymethod_info_shipfee">최소 결제 가능 금액은 총 결제금액에서 배송비를 제외한 금액입니다.</li>
+                    <li id="pg_paymethod_info_pg">소액 결제의 경우 PG사 정책에 따라 결제 금액 제한이 있을 수 있습니다.</li>
+                </ul>
+
+
+<!-- 카카오페이 도움말 --><ul id="kakaopay_info" class="ec-base-help typeDash">
+<li>카카오톡 앱을 설치한 후, 최초 1회 카드정보를 등록하셔야 사용 가능합니다.</li>
+                    <li>카카오머니로 결제 시, 현금영수증 발급은 ㈜카카오페이에서 발급가능합니다.</li>
+                </ul>
+
+<!-- 네이버페이 도움말 --><ul id="naverpay_info" class="ec-base-help typeDash">
+<li>주문 변경 시 카드사 혜택 및 할부 적용 여부는 해당 카드사 정책에 따라 변경될 수 있습니다.</li>
+                    <li>네이버페이는 네이버ID로 별도 앱 설치 없이 신용카드 또는 은행 계좌 정보를 등록하여 네이버페이 비밀번호로 결제할 수 있는 간편결제 서비스입니다.</li>
+                    <li>네이버페이 카드 간편결제는 네이버페이에서 제공하는 카드사별 무이자, 청구 할인 혜택을 받을 수 있습니다.</li>
+                </ul>
+
+
+<li>상품 수령과 동시에 배송 직원에게 결제 수수료를 지불하는 후불 결제수단입니다.</li>
+                        <li>최종 결제금액은 후불 결제 수수료가 포함된 금액으로 계산됩니다.</li>
+                        <li>희망배송업체/방식을 선택하시면 배송업체별 후불 결제 수수료가 적용됩니다.</li>
+                        <li>결제 수수료 정보를 확인 후 결제하시기 바랍니다.<a href="#ec-orderform-defer-layer" class="txtWord ec-order-deffered-payment-popup ec-jigsaw-showLayer">확인하기</a>
+</li>
+                    </ul>
+<ul id="pg_paymethod_info_defer_type_b" class="ec-base-help typeDash">
+<li>상품 수령과 동시에 배송 직원에게 결제 수수료를 지불하는 후불 결제수단입니다.</li>
+                        <li>최종 결제금액은 후불 결제 수수료가 포함된 금액으로 계산됩니다.</li>
+                        <li>희망배송업체/방식을 선택하시면 배송업체별 후불 결제 수수료가 적용됩니다.</li>
+                        <li>결제 수수료 정보를 확인 후 결제하시기 바랍니다. <a href="#ec-orderform-defer-layer" class="txtWord ec-order-deffered-payment-popup ec-jigsaw-showLayer">확인하기</a>
+</li>
+                    </ul>
+</div>
+            </div>
+        </div>
+       
+
+                                                <div id="tax_request_display_area" class="receiptArea displaynone">
+                
+
+                    <div class="ec-taxRequest-formArea">
+                        <div id="tax_request_form_area" class="infoForm">
+                           
+                         <div class="ec-base-table typeWrite gCellNarrow">
+                                <table border="1">
+
+                                    <colgroup>
+<col style="width:92px">
+<col style="width:auto">
+</colgroup>
+<tbody>
+<tr>
+    
+<div id="ec-jigsaw-area-benefit" class="ec-base-fold eToggle ">
+    <div id="ec-jigsaw-title-benefit" class="title">
+        <h2>적립 혜택</h2>
+        <span id="ec-jigsaw-heading-benefit" class="txtStrong gRight"><span id="mAllMileageSum-title">0</span> 예정</span>
+    </div>
+    <div class="contents">
+        <!-- app tag -->
+        <div id="ec-orderform-benefit-head"></div>
+        <div class="segment">
+            <div class="ec-base-table gCellNarrow">
+                <table border="1">
+
+</tbody>
+</table>
+</div>
+        </div>
+        <div class="totalPay">
+            <h3 class="heading">적립 예정금액</h3>
+            <strong class="txtEm"><span id="mAllMileageSum">0원</span></strong>
+        </div>
+      
+        <div id="ec-orderform-benefit-tail"></div>
+    </div>
+</div>
+
+<div id="ec-jigsaw-area-agreement">
+    <div class="agreeArea" id="all_agreement_checkbox">
+        <div class="allAgree">
+<input type="checkbox" id="allAgree"><label for="allAgree"><strong>모든 약관 동의</strong></label>
+</div>
+        <div class="agreement">
+          
+            <ul id="ec-orderform-agreement-head"></ul>
+<ul>
+
+<li id="chk_purchase_agreement" class="displaynone">
+                    <div class="agree"><span class="check"><input id="chk_purchase_agreement0" name="chk_purchase_agreement" fw-filter="" fw-label="구매진행 동의" fw-msg="" value="T" type="checkbox"  /><label for="chk_purchase_agreement0" ><span class="txtEm">[필수]</span> 구매조건 확인 및 결제진행 동의</label></span></div>
+                </li>
+               
+                <!-- 간편 회원가입 정보 및 배송정보(이름, 주소, 이메일, 전화번호) 회원정보에 사용동의 -->
+                <li id="ec-orderform-delivery_agreement_row">
+                    <div class="agree">
+                        <span class="check"><input id="simple_join_agree_use_info" name="simple_join_agree_use_info" type="checkbox" /><label for="simple_join_agree_use_info"><span class="txtEm">[필수]</span> 간편 회원가입 정보 및 배송정보(이름, 주소, 이메일, 전화번호) 회원정보에 사용동의</label></span>
+                    </div>
+                </li>
+               
+               
+                <li class="displaynone displaynone">
+                    <div class="agree">
+                        <span class="check"><label for="delivery_info_offer_check_box0"><span class="txtEm">[필수]</span> 배송정보 제공방침 동의</label></span>
+                        <button type="button" class="btnAgree" onclick="viewDelivery();">내용보기</button>
+                    </div>
+                </li>
+                                
+                    <div class="insuranceDetail">
+                        <div class="ec-base-table typeWrite gCellNarrow">
+                            <table border="1">
+
+                </li>
+              
+        <div class="checkNone ">
+            <ul>
+<div class="agree-msg" id="agreeMsg"><p>주문 내용을 확인하였으며 약관에 동의합니다.</p></div>
+        </div>
+    </div>
+</div>
+<div class="ec-base-button gFull" id="orderFixItem">
+            <button type="button" class="btnSubmit" id="btn_payment">
+                <span id="total_order_sale_price_view">17,500</span>원 <span class="">결제하기</span><span class="displaynone">정기배송 신청하기</span>
+            </button>
+        </div>
+</span>
+
+</body></html>

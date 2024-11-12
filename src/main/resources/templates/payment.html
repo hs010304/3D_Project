@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>상품 리스트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            width: 150px;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .product-card p {
+            color: #888;
+        }
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+        .pay-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .pay-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>상품 리스트</h1>
+
+    <form id="paymentForm">
+        <div class="product-list" th:each="product : ${shoptest}">
+            <div class="product-card">
+                <!-- 상품 이미지 표시 -->
+                <img th:src="@{${product.imageFile}}" alt="상품 이미지" />
+                <h3 th:text="${product.name}">상품 이름</h3>
+                <p th:text="${product.price}">상품 가격</p>
+                
+                <!-- 상품 선택 및 수량 입력 -->
+                <input type="checkbox" name="product" value="${product.id}" class="product-checkbox" data-name="${product.name}" data-price="${product.price}">
+                <label for="product">${product.name} - ${product.price}원</label>
+                <input type="number" name="quantity" class="quantity" min="1" value="1" data-id="${product.id}">
+            </div>
+        </div>
+        
+        <!-- 결제 버튼 -->
+        <button type="button" id="payButton" class="pay-button">결제하기</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+
+    <script>
+        var IMP = window.IMP;
+        IMP.init("imp47786020"); // 실제 가맹점 식별 코드로 변경
+
+        $(document).ready(function() {
+            // 결제 버튼 클릭 이벤트
+            $("#payButton").click(function() {
+                var selectedProducts = [];
+                $(".product-checkbox:checked").each(function() {
+                    var productId = $(this).val();
+                    var productName = $(this).data("name");
+                    var productPrice = $(this).data("price");
+                    var quantity = $(this).closest("div").find(".quantity").val();
+                    selectedProducts.push({
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        quantity: quantity
+                    });
+                });
+
+                if (selectedProducts.length === 0) {
+                    alert("상품을 선택해주세요.");
+                    return;
+                }
+
+                // 총 결제 금액 계산
+                var totalAmount = selectedProducts.reduce(function(sum, product) {
+                    return sum + (product.price * product.quantity);
+                }, 0);
+
+                // 결제 요청
+                IMP.request_pay({
+                    pg: "kakaopay",  // 결제 PG사 설정
+                    pay_method: "card",  // 결제 방법
+                    merchant_uid: "merchant_" + new Date().getTime(),  // 주문 고유번호
+                    name: selectedProducts.map(function(p) { return p.name; }).join(", "),  // 상품명
+                    amount: totalAmount,  // 총 결제 금액
+                    buyer_email: "gildong@gmail.com",
+                    buyer_name: "홍길동",
+                    buyer_tel: "010-4242-4242",
+                    buyer_addr: "서울특별시 강남구 신사동",
+                    buyer_postcode: "01181"
+                }, function(rsp) {
+                    if (rsp.success) {
+                        alert("결제가 완료되었습니다. 결제 승인번호: " + rsp.imp_uid);
+                        // 결제 완료 후 서버에 결제 정보 전달
+                        // 예: 서버에 결제 성공 정보 전달 (imp_uid 등)
+                        $.post("/products/confirmPayment", { impUid: rsp.imp_uid }, function(response) {
+                            alert(response);
+                        });
+                    } else {
+                        alert("결제에 실패하였습니다. 에러 내용: " + rsp.error_msg);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

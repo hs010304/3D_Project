@@ -1,0 +1,52 @@
+body {
+	background-color: #f2f2f2;
+}
+
+.join-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 150px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 600px;
+	text-align: center;
+}
+
+.Text {
+	text-align: left;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.InputBx {
+	margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	width: 80%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.RadioBtn {
+	text-align: left;
+	margin-left: 48px;
+	margin-bottom: 10px;
+}
+
+.check-btn {
+	background-color: #8F8F8F;
+	color: white;
+	padding: 10px 30px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	width: 84%;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}

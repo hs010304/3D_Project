@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Custy - 회원가입</title>
+    <link rel="stylesheet" href="register.css">
+	<link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/common/27f65f13d65624198b9d0001bceb94548239d4a9.d69323deaf6eae17cc58c2908dd3f0df/1726827827" crossorigin="anonymous" /><link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/tjdus0817/0724abef5d66278676a60076cb318e210ff77dc3.d69323deaf6eae17cc58c2908dd3f0df/1726819406" crossorigin="anonymous" />
+
+</head>
+
+<body>
+	
+	<img src="images/header1.jpg">
+    
+	<header id="header" class="layout1" data-ez-layout="layout1" data-ez="contents-1kbhajm-1"><ez-prop data-version="1.0.0" type="layout"><ez-var data-prop="layout" data-namespace="ez.layout.header.layout" data-type="array"><ez-item data-id="layout1" data-name="2단 중앙형 (아이콘 하단)"></ez-item></ez-var></ez-prop><div class="inner">
+			<div class="toparea display_pc_only">
+				<div class="toparea_shoppinginfo">
+			<div data-ez-group="shopping-info" data-ez-role="list">
+			    </div>
+				</div>
+
+				<div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
+					<a data-ez-item="join" href="signin" class="xans-element- xans-layout xans-layout-statelogoff ">로그인</a>
+					<a data-ez-item="login" href="register" class="xans-element- xans-layout xans-layout-statelogoff ">회원가입</a>
+					<a data-ez-item="order" href="cart" class="xans-element- xans-layout xans-layout-statelogoff ">장바구니</a>
+					<a data-ez-item="recent" href="wishlist" class="xans-element- xans-layout xans-layout-statelogoff ">위시리스트</a>
+					<div class="toparea_state_board">
+						<a data-ez-item="board" href="notice">COMMUNITY</a>
+	</div>
+				</div>
+			</div>
+
+
+			<div class="top_nav_box" id="top_nav_box">
+						<div class="xans-element- xans-layout xans-layout-logotop top_logo "><a href="index"><img src="images/LOGO.jpg" alt="Custy"></a>
+			</div>
+
+			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
+
+						<div data-ez-module="menu-main/1" data-ez-mode="manual">
+			        <div class="xans-element- xans-layout xans-layout-category top_category">
+			<ul><li><a href="#">BEST</a></li>
+			    <li><a href="#">NEW</a></li>
+			    <li><a href="#">OUTER</a></li>
+			    <li><a href="#">TOP</a></li>
+			    <li><a href="#">PANTS</a></li>
+			    <li><a href="#">SHOW</a></li></ul></div>
+			      </div>
+			  <div class="top_mypage">
+			  				<a href="javascript:;" class="eSearch"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"></path><path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"></path></svg></a>
+			  				<a href="mypage"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"></circle><path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"></path></svg></a>
+			  				<a href="cart" class="xans-element- xans-layout xans-layout-orderbasketcount "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><path fill="#000" d="M23.073 22.253l-1.946-14.31c-.04-.38-.368-.667-.758-.667h-3.656v-1.74c0-2.543-2.115-4.613-4.713-4.613-2.599 0-4.713 2.07-4.713 4.613v1.74H3.63c-.39 0-.717.288-.758.667L.927 22.253c-.022.21.047.42.192.577.144.157.35.247.566.247h20.63c.216 0 .421-.09.566-.247.145-.157.214-.366.192-.576zM8.81 5.537c0-1.72 1.431-3.122 3.19-3.122 1.758 0 3.19 1.401 3.19 3.122v1.74H8.81v-1.74zm-6.28 16.05l1.786-12.82h2.97v1.644c0 .412.342.746.762.746.421 0 .762-.334.762-.746V8.767h6.38v1.643c0 .412.34.746.761.746.42 0 .762-.334.762-.746V8.767h2.97l1.786 12.819H2.53z"></path></svg><span class="count displaynone EC-Layout_Basket-count-display"><span class="EC-Layout-Basket-count">0</span></span>
+			  </a>
+			  			</div>
+			  		</div>
+			  	</div>
+			  </header>
+
+    <div id="container">
+        <div id="contents">
+            <div class="section path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><a href="index">홈</a></li>
+                    <li title="현재 위치"><strong>회원 가입</strong></li>
+                </ol>
+            </div>
+
+            <div class="section titleArea">
+                <h2>회원 가입</h2>
+            </div>
+
+            <div class="section ec-base-step">
+                <ol class="step"><li>정보 입력</li></ol>
+            </div>
+
+            <form id="joinForm" name="joinForm" th:action="@{/register}" th:object="${memberForm}" method="post" enctype="multipart/form-data">
+                <div class="xans-member xans-member-join memberArea">
+                    <div class="ec-base-table typeWrite">
+                        <table border="1">
+                            <caption>회원 기본정보</caption>
+                            <colgroup>
+                                <col style="width:190px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">아이디</th>
+                                    <td>
+                                        <input type="text" th:field="*{nick}" required/><br/>
+                                        <span th:if="${#fields.hasErrors('nick')}" th:errors="*{nick}"></span><br/>
+                                        <div class="txtInfo">(영문소문자/숫자, 4~16자)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">비밀번호</th>
+                                    <td>
+                                        <input type="password" th:field="*{password}" required/><br/>
+                                        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span><br/>
+                                        <div class="txtInfo">(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">비밀번호 확인</th>
+                                    <td>
+                                        <input type="password" th:field="*{passwordConfirm}" required/><br/>
+                                        <span th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}"></span><br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이름</th>
+                                    <td>
+                                        <input type="text" th:field="*{username}" required/><br/>
+                                        <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span><br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">휴대전화</th>
+                                    <td>
+                                        <input type="text" th:field="*{phonenumber}" required/><br/>
+                                        <span th:if="${#fields.hasErrors('phonenumber')}" th:errors="*{phonenumber}"></span><br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이메일</th>
+                                    <td>
+                                        <input type="text" th:field="*{email}" required/><br/>
+                                        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ec-base-button gBottom">
+                        <a href="register" class="btnNormalFix sizeM" onclick="history.go(-1); return false;">취소</a>
+                        <button type="submit" class="btnSubmit gFull sizeM">가입하기</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 하단 베너 -->
+	<div class="bottom-nav RMB RTB" ez-module="bottom-navigation" data-ez="contents-1789ael-1">
+	    <ul class="bottom-nav__tabBar"><li><button type="button" class="btnNav eNavFold"><i aria-hidden="true" class="icon icoNav"></i>네비게이션</button></li>
+	        <li><button type="button" class="btnSearch eSearch"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"></path><path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"></path></svg>검색</button></li>
+	        <li><a href="/skin-skin2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><path stroke="#000" stroke-width="1.5" d="M12 3L2 11.36V22h7.692v-7.6h4.616V22H22V11.36L12 3z"></path></svg>홈</a></li>
+	                <li class="xans-element- xans-layout xans-layout-statelogoff ">
+						<a href="/skin-skin2/order/basket.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><path fill="#000" d="M23.073 22.253l-1.946-14.31c-.04-.38-.368-.667-.758-.667h-3.656v-1.74c0-2.543-2.115-4.613-4.713-4.613-2.599 0-4.713 2.07-4.713 4.613v1.74H3.63c-.39 0-.717.288-.758.667L.927 22.253c-.022.21.047.42.192.577.144.157.35.247.566.247h20.63c.216 0 .421-.09.566-.247.145-.157.214-.366.192-.576zM8.81 5.537c0-1.72 1.431-3.122 3.19-3.122 1.758 0 3.19 1.401 3.19 3.122v1.74H8.81v-1.74zm-6.28 16.05l1.786-12.82h2.97v1.644c0 .412.342.746.762.746.421 0 .762-.334.762-.746V8.767h6.38v1.643c0 .412.34.746.761.746.42 0 .762-.334.762-.746V8.767h2.97l1.786 12.819H2.53z"></path></svg>Cart <span class="count displaynone EC-Layout_Basket-count-display"><span class="EC-Layout-Basket-count"></span></span></a>
+	</li>
+	        <li><a href="/skin-skin2/myshop/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"></circle><path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"></path></svg>
+	마이쇼핑</a></li>
+	    </ul><div class="bottom-nav__top">
+	        <a href="#wrap" title="화면 최상단으로 이동하기"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" fill="#1a1a1a" viewbox="0 0 14 20" class="icon" role="img"><path d="M3,8.4C2.3,9,1.2,9,0.5,8.3c-0.6-0.7-0.6-1.7,0-2.4l5.3-5.2C6.5,0,7.6,0,8.3,0.7l5.2,5.1c0.7,0.7,0.7,1.8,0,2.5
+		c-0.7,0.7-1.8,0.7-2.4,0L8.8,6.1l0,12.1c0,2.3-3.6,2.3-3.6,0l0-12L3,8.4z"></path></svg></a>
+	    </div>
+	</div>
+	<div class="footer_margin" data-ez="module-1oktphz-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain"></div>
+	<footer id="footer" class="layout1" data-ez-layout="layout1" data-ez="contents-06bwsrq-1"><ez-prop data-version="1.0.0" type="layout"><ez-var data-prop="layout" data-namespace="ez.layout.footer.layout" data-type="array"><ez-item data-id="layout1" data-name="기본형"></ez-item><ez-item data-id="layout2" data-name="좌우반전형"></ez-item><ez-item data-id="layout3" data-name="중앙형"></ez-item></ez-var></ez-prop><div class="xans-element- xans-layout xans-layout-footer inner "><div class="xans-element- xans-layout xans-layout-logobottom bt_logo ">
+		<a href="index"><img src="images/logo1.jpg" alt="Custy"></a>
+	</div>
+	<!-- //bt_logo -->
+	<div class="bt_util" data-ez-group="shortcut">
+				<div data-ez-role="title" style="display:none;">바로가기</div>
+				<ul data-ez-role="list">
+					<li data-ez-item="company"><a href="#">회사소개</a></li>
+									<li data-ez-item="agreement"><a href="#">이용약관</a></li>
+									<li data-ez-item="privacy"><a href="#"><strong>개인정보처리방침</strong></a></li>
+									<li data-ez-item="guide"><a href="#">이용안내</a></li>
+				</ul>
+	</div>
+
+	<div class="bt_wrap">
+				<div class="bt_info" data-ez-group="info">
+					<div class="title" data-ez-role="title">쇼핑몰 기본정보</div>
+	                <div class="bt_info_list" data-ez-role="list">
+	                  <div data-ez-item="company_name">
+	<span data-ez-role="field">상호명</span> <span data-ez-role="value">Custy</span>
+	</div>
+					  <div data-ez-item="president_name">
+	<span data-ez-role="field">대표자명</span> <span data-ez-role="value">ㅇㅇㅇ</span>
+	</div>
+					  <div data-ez-item="address">
+	<span data-ez-role="field">사업장 주소</span> <span data-ez-role="value">  </span>
+	</div>
+					  <div data-ez-item="phone">
+	<span data-ez-role="field">대표 전화</span> <span data-ez-role="value">010-0000-0000</span>
+	</div>
+					  <div data-ez-item="company_regno">
+	<span data-ez-role="field">사업자 등록번호</span> <span data-ez-role="value"></span>
+	</div>
+					  <div data-ez-item="network_regno">
+	<span data-ez-role="field">통신판매업 신고번호</span> <span data-ez-role="value"> </span>
+	</div>
+					  <div data-ez-item="cpo_name">
+	<span data-ez-role="field">개인정보보호책임자</span> <span data-ez-role="value">ㅇㅇㅇ</span>
+	</div>
+				  </div>
+
+				</div>
+
+
+				<div data-ez-group="cs" class="xans-element- xans-layout xans-layout-info bt_cscenter "><div class="title" data-ez-role="title">고객센터 정보</div>
+	<div data-ez-role="list">
+						<div data-ez-item="phone" class="bt_txt01">
+	<strong>상담/주문 전화</strong><span class="pdr10"></span><span data-ez-role="value">010-0000-0000</span>
+	</div>
+						<div data-ez-item="email" class="bt_txt02">
+	<strong>상담/주문 이메일</strong><span data-ez-role="value">aaa@naver.com</span>
+	</div>
+						<div data-ez-item="runtime" class="bt_txt02">
+	<strong>CS운영시간</strong><span data-ez-role="value"></span>
+	</div>
+					</div>
+	</div>
+
+
+				<div class="bt_bank" data-ez-group="bank">
+					<div data-ez-role="title" class="title">결제정보</div>
+					<div class="title_sub"><strong>무통장 계좌정보</strong></div>
+					<div class="bt_txt02">
+						<ul data-ez-role="list">
+	<li data-ez-role="item">
+								<span data-ez-role="bank_name">은행</span> <span class="pdr10"></span>
+								<span data-ez-role="account_number">0000-000-00000</span><span class="pdr10"></span>
+								<span data-ez-role="account_name">예금주</span>
+							</li>
+						</ul>
+	</div>
+
+				</div>
+
+			</div>
+
+	<div class="bt_wrap2">
+				<div class="bt_copyright">
+					Copyright © Custy. 
+				</div>
+
+
+				<div class="bt_sns" data-ez-group="sns" data-ez-role="list">
+	        <div class="title" data-ez-role="title">SNS</div>
+					<a data-ez-item="instagram" href="https://instagram.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewbox="0 0 20 20" class="icon" role="img"><path d="M14.22,0H5.75C2.575,0.011,0.005,2.585,0,5.76l0,0v8.44c-0.006,3.183,2.567,5.769,5.75,5.78h8.45
+		c3.187,0.006,5.774-2.573,5.78-5.76c0-0.003,0-0.007,0-0.01l0,0V5.76c-0.006-3.188-2.592-5.77-5.78-5.77 M18.15,14.37
+		c0.006,2.11-1.7,3.824-3.81,3.83c-0.007,0-0.013,0-0.02,0H5.67c-2.115,0-3.83-1.715-3.83-3.83l0,0V5.76
+		c-0.006-2.11,1.7-3.824,3.81-3.83c0.003,0,0.007,0,0.01,0h8.66c2.111,0,3.824,1.709,3.83,3.82l0,0V14.37z"></path><path d="M9.99,4.84c-2.866,0-5.19,2.324-5.19,5.19s2.324,5.19,5.19,5.19c2.862,0,5.184-2.318,5.19-5.18
+		c0.006-2.866-2.314-5.194-5.18-5.2C9.997,4.84,9.993,4.84,9.99,4.84L9.99,4.84 M9.99,13.39c-1.856-0.011-3.351-1.524-3.34-3.38
+		c0.011-1.856,1.524-3.351,3.38-3.34c1.852,0.011,3.345,1.518,3.34,3.37C13.354,11.895,11.845,13.39,9.99,13.39L9.99,13.39"></path><path d="M15.36,3.45c-0.668,0-1.21,0.542-1.21,1.21s0.542,1.21,1.21,1.21c0.668,0,1.21-0.542,1.21-1.21
+		c0-0.003,0-0.007,0-0.01c0.006-0.657-0.523-1.195-1.18-1.2C15.38,3.45,15.37,3.45,15.36,3.45L15.36,3.45"></path></svg>
+	instagram</a>
+					
+					<a data-ez-item="kakao" href="https://pf.kakao.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" fill="none" viewbox="0 0 23 20" class="icon" role="img"><g><path class="cls-1" d="M9.19,7.31,8.42,9.39H10L9.22,7.31Z"></path><path class="cls-1" d="M11.5,0C5.15,0,0,3.85,0,8.61c0,3.09,2.18,5.8,5.46,7.32-.24.85-.87,3.07-1,3.55s.23.59.48.43l4.43-2.85a15.15,15.15,0,0,0,2.13.15c6.35,0,11.5-3.85,11.5-8.6S17.85,0,11.5,0ZM5.84,11a.55.55,0,0,1-.56.53H5.16A.55.55,0,0,1,4.61,11V7.15H3.51a.54.54,0,1,1,0-1.08H6.87a.54.54,0,1,1,0,1.08h-1Zm5.51.5a.57.57,0,0,1-.71-.33l-.29-.76H8.06l-.29.77a.56.56,0,0,1-.71.32.52.52,0,0,1-.34-.67L8.37,6.61l0-.07A.78.78,0,0,1,9.22,6a.84.84,0,0,1,.79.45h0l1.68,4.34a.53.53,0,0,1-.34.67Zm3.61,0H12.67a.5.5,0,0,1-.52-.49h0a.38.38,0,0,1,0-.1s0-.06,0-.09V6.58A.62.62,0,0,1,12.77,6a.61.61,0,0,1,.62.59h0v3.9H15a.5.5,0,0,1,.5.5.51.51,0,0,1-.5.48Zm4.88-.07a.57.57,0,0,1-.77-.1l-1.65-2-.36.33v1.34a.6.6,0,0,1-.6.6.6.6,0,0,1-.64-.56V6.58a.62.62,0,0,1,1.24,0V8.11l2-1.84a.56.56,0,0,1,.78,0,.5.5,0,0,1,0,.73L18.21,8.49,20,10.66A.49.49,0,0,1,19.84,11.39Z"></path></g></svg>
+	kakao</a>
+				</div>
+
+			</div>
+
+	</div>
+
+	</footer><form id="searchBarForm" name="" action="/skin-skin2/product/search.html" method="get" target="_self" enctype="multipart/form-data" >
+	<input id="banner_action" name="banner_action" value="" type="hidden"  /><div data-ez="contents-0hsfwhz-1" class="xans-element- xans-layout xans-layout-searchheader ">
+	<div class="title">SEARCH</div>
+	<fieldset>
+	<legend>검색</legend>
+			<input id="keyword" name="keyword" fw-filter="" fw-label="검색어" fw-msg="" class="inputTypeText" placeholder="검색어를 입력해주세요" onmousedown="SEARCH_BANNER.clickSearchForm(this)" value="" type="text"  /><button type="button" class="btnDelete">삭제</button><button type="button" class="btnSearch" onclick="SEARCH_BANNER.submitSearchBanner(this); return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24" class="icon" role="img"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"></path><path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"></path></svg> 검색</button><ul class="autoDrop" id=""></ul>
+	</fieldset>
+	<button type="button" class="btnClose"><i aria-hidden="true" class="icon icoClose"></i>닫기</button>
+	</div>
+	</form>
+
+	</div>
+	</span>
+</body>
+</html>

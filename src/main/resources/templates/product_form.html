@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/common/27f65f13d65624198b9d0001bceb94548239d4a9.d69323deaf6eae17cc58c2908dd3f0df/1726827827" crossorigin="anonymous" /><link rel="stylesheet" type="text/css" href="//optimizer.poxo.com/css/tjdus0817/c572c4707041bb39efc8e08ba9fafe139fcbc713.d69323deaf6eae17cc58c2908dd3f0df/1726819406" crossorigin="anonymous" />
+	   <meta charset="UTF-8">
+<head>
+    <title>상품 추가</title>
+</head>
+<body>
+    <h1>상품 추가</h1>
+    <!-- 파일 업로드를 위해 enctype 설정 -->
+    <form th:action="@{/products/add}" th:object="${productForm}" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="name">상품 이름:</label>
+            <input type="text" id="name" th:field="*{name}" />
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+        </div>
+        <div>
+            <label for="price">가격:</label>
+            <input type="number" id="price" th:field="*{price}" />
+            <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+        </div>
+        <div>
+            <label for="stock">재고:</label>
+            <input type="number" id="stock" th:field="*{stock}" />
+            <span th:if="${#fields.hasErrors('stock')}" th:errors="*{stock}"></span>
+        </div>
+        <div>
+            <label for="description">설명:</label>
+            <textarea id="description" th:field="*{description}"></textarea>
+            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+        </div>
+        <!-- 이미지 업로드를 위한 input type="file" 추가 -->
+        <div>
+            <label for="imageFile">이미지 파일:</label>
+            <input type="file" id="imageFile" th:field="*{imageFile}" />
+            <span th:if="${#fields.hasErrors('imageFile')}" th:errors="*{imageFile}"></span>
+        </div>
+        <div>
+            <label for="size">사이즈:</label>
+            <input type="text" id="size" th:field="*{size}" />
+            <span th:if="${#fields.hasErrors('size')}" th:errors="*{size}"></span>
+        </div>
+        <div>
+            <label for="category">카테고리:</label>
+            <select id="category" th:field="*{category}">
+                <option value="OUTER">OUTER</option>
+                <option value="TOP">TOP</option>
+                <option value="PANTS">PANTS</option>
+            </select>
+            <span th:if="${#fields.hasErrors('category')}" th:errors="*{category}"></span>
+        </div>
+        
+        <div>
+            <button type="submit">상품 추가</button>
+        </div>
+    </form>
+</body>
+</html>

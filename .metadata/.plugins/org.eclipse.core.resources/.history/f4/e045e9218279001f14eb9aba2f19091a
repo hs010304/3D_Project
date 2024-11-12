@@ -1,0 +1,14 @@
+spring.application.name=3D_Project
+
+spring.datasource.hikari.driver-class-name=org.h2.Driver
+spring.datasource.hikari.jdbc-url=jdbc:h2:tcp://localhost/~/test
+spring.datasource.hikari.username=sa
+spring.datasource.hikari.password=
+spring.h2.console.enabled=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+
+server.port=8085
