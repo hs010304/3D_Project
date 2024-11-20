@@ -10,7 +10,7 @@
 
 ## 팀원 구성
 
-### 🍊 윤형식 (https://github.com/hs010304/3D_Project/edit/main/README.md)
+### 🍊 윤형식 https://github.com/hs010304
 
 ### 👻 김서연
 
