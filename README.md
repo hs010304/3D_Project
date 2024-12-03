@@ -391,6 +391,9 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 
 
 ### [상품 페이지(메인), 카테고리]
+![image](https://github.com/user-attachments/assets/4b05a23a-905b-4afa-ae61-80ff5b9fb063)
+<br>
+카테고리 (TOP)
 
 
 
