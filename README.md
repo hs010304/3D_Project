@@ -384,8 +384,11 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 <br>
 
 ### [로그아웃]
-
+![image](https://github.com/user-attachments/assets/6e1680e0-5c32-48da-a587-732099122180)
 <br>
+
+- 로그인시 세션에 저장된 정보를 삭제후 메인페이지로 반환
+
 
 ### [상하단 배너]
 
