@@ -353,15 +353,16 @@ MZ 세대의 자기 표현 욕구와 재미를 반영한 3D 커스터마이징 �
 
 ### [초기화면]
 ![image](https://github.com/user-attachments/assets/dedfadd0-292d-4225-8fdf-f25c595d8a48)
-
+<br>
 - 처음 메인 페이지로 3가지 카테고리로 구성되어 있으며, shop now 아이콘 클릭 시 쇼핑몰 메인 페이지로 <br>
-- 넘어가고 차례대로 커스터마이징 서비스를 이용할 수 있으며 마지막 쇼룸 페이지까지 구성되어 있다.
+넘어가고 차례대로 커스터마이징 서비스를 이용할 수 있으며 마지막 쇼룸 페이지까지 구성되어 있다.
 
 <br>
 
 ### [메인화면]
 ![image](https://github.com/user-attachments/assets/730487a6-2a3e-4692-ab2e-defcd5e88199)
-best, new. outer. top. pants로 카테고리가 나뉘어져 있으며 로그인, 회원가입, 장바구니, 위시리스트, 커뮤니티로 구성되어 있다.
+<br>
+- best, new. outer. top. pants로 카테고리가 나뉘어져 있으며 로그인, 회원가입, 장바구니, 위시리스트, 커뮤니티로 구성되어 있다.
 
 <br>
 
