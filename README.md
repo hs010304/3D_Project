@@ -171,7 +171,7 @@ MZ 세대의 자기 표현 욕구와 재미를 반영한 3D 커스터마이징 �
 ### 🍊윤형식
 
 - **DB 설계 및 구축**
-- 업무 내용:
+- 업무 내용
     - 요구사항 분석을 기반으로 ERD 설계 및 데이터베이스 모델링 수행.
     - Member, Product, Order, Cart 등의 주요 엔티티 정의 및 관계 설정.
     - 엔티티 필드 최적화 및 제약조건 설정(Primary Key, Foreign Key, Unique, Index 등).
