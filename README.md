@@ -65,71 +65,103 @@ MZ 세대의 자기 표현 욕구와 재미를 반영한 3D 커스터마이징 �
 ## 3. 프로젝트 구조
 
 ```
-├── README.md
-├── .eslintrc.js
-├── .gitignore
-├── .prettierrc.json
-├── package-lock.json
-├── package.json
-│
-├── public
-│    └── index.html
-└── src
-     ├── App.jsx
-     ├── index.jsx
-     ├── api
-     │     └── mandarinAPI.js
-     ├── asset
-     │     ├── fonts
-     │     ├── css_sprites.png
-     │     ├── logo-404.svg
-     │     └── logo-home.svg
-     │          .
-     │          .
-     │          .
-     ├── atoms
-     │     ├── LoginData.js
-     │     └── LoginState.js
-     ├── common
-     │     ├── alert
-     │     │     ├── Alert.jsx
-     │     │     └── Alert.Style.jsx
-     │     ├── button
-     │     ├── comment
-     │     ├── inputBox
-     │     ├── post
-     │     ├── postModal
-     │     ├── product
-     │     ├── tabMenu
-     │     ├── topBanner
-     │     └── userBanner
-     ├── pages
-     │     ├── addProduct
-     │     │     ├── AddProduct.jsx
-     │     │     └── AddProduct.Style.jsx
-     │     ├── chatList
-     │     ├── chatRoom
-     │     ├── emailLogin
-     │     ├── followerList
-     │     ├── followingList
-     │     ├── home
-     │     ├── join
-     │     ├── page404
-     │     ├── postDetail
-     │     ├── postEdit
-     │     ├── postUpload
-     │     ├── productEdit
-     │     ├── profile
-     │     ├── profileEdit
-     │     ├── profileSetting
-     │     ├── search
-     │     ├── snsLogin
-     │     └── splash
-     ├── routes
-     │     ├── privateRoutes.jsx
-     │     └── privateRoutesRev.jsx  
-     └── styles
-           └── Globalstyled.jsx
+/3D_Project  
+├── src  
+│   ├── main  
+│   │   ├── java  
+│   │   │   └── com.example.demo  
+│   │   │       ├── Application.java  
+│   │   │       ├── config  
+│   │   │       │   ├── ErrorHd.java  
+│   │   │       │   ├── PortOneConfig.java  
+│   │   │       │   └── WebConfig.java  
+│   │   │       ├── controller  
+│   │   │       │   ├── BuyController.java  
+│   │   │       │   ├── CartController.java  
+│   │   │       │   ├── logincheck.java  
+│   │   │       │   ├── Main_Controller.java  
+│   │   │       │   ├── MemberController.java  
+│   │   │       │   └── ProductController.java  
+│   │   │       ├── dto  
+│   │   │       │   ├── MemberFormDTO.java  
+│   │   │       │   ├── OrderDto.java  
+│   │   │       │   ├── PortOneDto.java  
+│   │   │       │   ├── ProductFormDTO.java  
+│   │   │       │   └── ProductServiceDTO.java  
+│   │   │       ├── entity  
+│   │   │       │   ├── Cart.java  
+│   │   │       │   ├── CartItem.java  
+│   │   │       │   ├── Member.java  
+│   │   │       │   ├── Order.java  
+│   │   │       │   ├── OrderDetail.java  
+│   │   │       │   ├── PaymentStatus.java  
+│   │   │       │   ├── Product.java  
+│   │   │       │   └── Role.java  
+│   │   │       ├── repository  
+│   │   │       │   ├── CartItemRepository.java  
+│   │   │       │   ├── CartRepository.java  
+│   │   │       │   ├── MemberRepository.java  
+│   │   │       │   ├── OrderDetailRepository.java  
+│   │   │       │   ├── OrderRepository.java  
+│   │   │       │   └── ProductRepository.java  
+│   │   │       └── service  
+│   │   │           ├── CartService.java  
+│   │   │           ├── MemberService.java  
+│   │   │           ├── OrderService.java  
+│   │   │           └── ProductService.java  
+│   │   ├── resources  
+│   │   │   ├── META-INF  
+│   │   │   ├── static  
+│   │   │   │   ├── images  
+│   │   │   │   ├── t_shirt  
+│   │   │   │   ├── Find_style.css  
+│   │   │   │   ├── index.css  
+│   │   │   │   ├── Inquiry_M_style.css  
+│   │   │   │   ├── Join_style.css  
+│   │   │   │   ├── Notice_M_style.css  
+│   │   │   │   ├── Product_D_style.css  
+│   │   │   │   ├── register.css  
+│   │   │   │   ├── signin.css  
+│   │   │   │   └── User_M_style.css  
+│   │   │   ├── templates  
+│   │   │   │   ├── a_index.html  
+│   │   │   │   ├── best.html  
+│   │   │   │   ├── buy.html  
+│   │   │   │   ├── buy2.html  
+│   │   │   │   ├── cart.html  
+│   │   │   │   ├── carttest.html  
+│   │   │   │   ├── CREATE_GLB.html  
+│   │   │   │   ├── delete-success.html  
+│   │   │   │   ├── detail.html  
+│   │   │   │   ├── Errorpg.html  
+│   │   │   │   ├── hello.html  
+│   │   │   │   ├── index.html  
+│   │   │   │   ├── member-detail.html  
+│   │   │   │   ├── memberList.html  
+│   │   │   │   ├── mypage.html  
+│   │   │   │   ├── new.html  
+│   │   │   │   ├── notice.html  
+│   │   │   │   ├── order_form.html  
+│   │   │   │   ├── order_success.html  
+│   │   │   │   ├── outer.html  
+│   │   │   │   ├── P_detail.html  
+│   │   │   │   ├── pants.html  
+│   │   │   │   ├── payment.html  
+│   │   │   │   ├── product_detail.html  
+│   │   │   │   ├── product_form.html  
+│   │   │   │   ├── product_list.html  
+│   │   │   │   ├── register.html  
+│   │   │   │   ├── shopnow.html  
+│   │   │   │   ├── shoptest.html  
+│   │   │   │   ├── showroom.html  
+│   │   │   │   ├── signin.html  
+│   │   │   │   ├── t_2(ShowRoom).html  
+│   │   │   │   ├── t_4(BSR).html  
+│   │   │   │   ├── test.html  
+│   │   │   │   ├── top.html  
+│   │   │   │   └── wishlist.html  
+│   │   │   └── application.properties  
+
 ```
 
 <br>
