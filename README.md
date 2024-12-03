@@ -394,7 +394,12 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 ![image](https://github.com/user-attachments/assets/4b05a23a-905b-4afa-ae61-80ff5b9fb063)
 <br>
 카테고리 (TOP)
-
+<br>
+![image](https://github.com/user-attachments/assets/2aee6759-022c-4163-9fa1-0fdde5a8ebaf)
+<br>
+카테고리 (OUTER)
+<br>
+- 저장된 데이터에 카테고리를 분류하여 페이별로 구별 할 수 있게 설계.
 
 
 
