@@ -177,8 +177,14 @@ MZ 세대의 자기 표현 욕구와 재미를 반영한 3D 커스터마이징 �
     - 엔티티 필드 최적화 및 제약조건 설정(Primary Key, Foreign Key, Unique, Index 등).
     - H2 데이터베이스를 사용하여 테스트 환경 구축.
     - 초기 데이터(seed 데이터) 작성 및 DB 스키마 생성.
-- **기능**
-    - 유저 검색, 게시글 등록 및 수정, 게시글 상세 확인, 댓글 등록, 팔로워 게시글 불러오기, 좋아요 기능
+- 세부 작업 목록
+- ERD 설계
+    - 주요 엔티티: Member, Product, Order, OrderDetail, Cart, CartItem.
+    - 관계: 1:N (Member ↔ Order), N:M (Product ↔ Cart).
+- 테이블 생성
+    - SQL 스크립트 작성 및 H2 데이터베이스에 반영.
+- CRUD 작업 확인
+    - Repository 테스트를 통해 데이터 삽입, 수정, 삭제, 조회 동작 확인.
 
 <br>
     
