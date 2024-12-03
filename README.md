@@ -367,6 +367,10 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 <br>
 
 ### [회원가입]
+![image](https://github.com/user-attachments/assets/a86d627a-9e8c-444e-9ae7-a0f51f213a2b)
+<br>
+- 회원가입 시 비밀번호는 대소문자, 숫자, 특수문자를 포함하도록 유효성 검증 로직을 적용하였으며, <br>
+조건을 충족하지 않을 경우 오류 메시지를 표시하며 재입력하도록 설계.
 
 
 <br>
