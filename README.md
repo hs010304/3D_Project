@@ -434,7 +434,9 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 <br>
 
 ### [커스터마이징]
-
+![image](https://github.com/user-attachments/assets/d3220f25-5838-41fe-b052-fdfd0be03456)
+<br>
+- 커스터마이징
 <br>
 
 ### [쇼룸]
