@@ -376,6 +376,9 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 <br>
 
 ### [로그인]
+![image](https://github.com/user-attachments/assets/f8108f35-b9a6-4071-9ce9-08d58d904d55)
+<br>
+- 회원가입 완료 후, 저장된 사용자 데이터를 기반으로 인증 로직을 구현하여 로그인 기능을 동작하도록 설계.
 
 
 <br>
