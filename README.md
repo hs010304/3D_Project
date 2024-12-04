@@ -436,7 +436,10 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 ### [커스터마이징]
 ![image](https://github.com/user-attachments/assets/d3220f25-5838-41fe-b052-fdfd0be03456)
 <br>
-- 커스터마이징
+모델 선택, 색상 및 재질 변경, 텍스처 로드 및 적용, 드래그 앤 드롭 구현 <br>
+상태 저장 및 로드, 언어 전환 버튼, 스크린샷 저장, 워터마크 추가
+
+
 <br>
 
 ### [쇼룸]
@@ -444,7 +447,9 @@ customize(커스터마이징 서비스), show room(쇼룸 페이지)로 구성.
 <br>
 ![image](https://github.com/user-attachments/assets/dc5006a8-d822-4bdc-b5e8-d0d19fe9cfbb)
 <br>
--쇼룸
+-입점된 브랜드 쇼핑몰들은 하단 아이콘 클릭 시 각기 다른 페이지로 전환되며, 커스터마이징 서비스를 통해 <br>
+제작된 상품들을 시각적으로 제공하여 고객의 흥미를 유발하도록 구성. <br>
+이를 통해 브랜드는 상품 홍보와 고객 참여를 동시에 유도할 수 있도록 설계.
 
 
 <br>
